@@ -1,0 +1,35 @@
+/* Sakura Theme Global Adjustments */
+:root {
+  --sakura-pink: #f4c2c2;
+  --sakura-light: #fff5f7;
+  --leaf-green: #c1e1c1;
+  --leaf-light: #f1f8f1;
+}
+
+/* Custom scrollbar for a softer look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sakura-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sakura-pink);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0a8a8;
+}
+
+/* Animation for modals */
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-in {
+  animation: fade-in 0.3s ease-out;
+}

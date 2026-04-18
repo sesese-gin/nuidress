@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sakura-light: #fff5f7;
+  --color-sakura-pink: #f4c2c2;
+  --color-sakura-deep: #f0a8a8;
+  --color-leaf-light: #f1f8f1;
+  --color-leaf-green: #c1e1c1;
+  --color-leaf-deep: #a8d5a8;
+  --color-eye-safe-text: #4a4a4a;
+}
+
+body {
+  @apply bg-sakura-light text-eye-safe-text;
+}
+
+.card-container {
+  @apply bg-white rounded-3xl shadow-xl shadow-sakura-pink/20 border border-sakura-pink/30;
+}
+
+.btn-primary {
+  @apply bg-sakura-pink text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-sakura-deep transition-all active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-leaf-green text-eye-safe-text font-bold py-3 px-6 rounded-full shadow-md hover:bg-leaf-deep transition-all active:scale-95;
+}
