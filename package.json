@@ -1,11 +1,14 @@
 {
-  "name": "plushie-dressup",
+  "name": "nuidress",
   "private": true,
+  "homepage": "https://sesese-gin.github.io/nuidress/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",         
+    "deploy": "gh-pages -d dist",         
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -31,4 +34,7 @@
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.4"
   }
+  
 }
+
+

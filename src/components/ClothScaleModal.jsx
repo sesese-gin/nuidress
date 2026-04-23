@@ -4,8 +4,8 @@ import SakuraIcon from './SakuraIcon';
 
 export default function ClothScaleModal({ imageUrl, category, dimType, onConfirm, onCancel }) {
   const [step, setStep] = useState(1); 
-  const [measurePx, setMeasurePx] = useState(200); 
-  const [measureMm, setMeasureMm] = useState(200); 
+  const [measurePx, setMeasurePx] = useState(0); 
+  const [measureMm, setMeasureMm] = useState(0); 
   const [posX, setPosX] = useState(100); 
   const [posY, setPosY] = useState(150); 
   const [faceHole, setFaceHole] = useState({ x: 150, y: 150, width: 100, height: 100 });
@@ -235,7 +235,10 @@ export default function ClothScaleModal({ imageUrl, category, dimType, onConfirm
                   <input 
                     type="number" 
                     value={measureMm}
-                    onChange={(e) => setMeasureMm(Number(e.target.value))}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setMeasureMm(val === '' ? '' : Number(val));
+                    }}
                     className="w-full border-2 border-sakura-light rounded-xl p-4 text-xl font-bold text-eye-safe-text focus:border-sakura-pink focus:outline-none transition-colors"
                   />
                   <span className="font-bold text-sakura-deep">mm</span>

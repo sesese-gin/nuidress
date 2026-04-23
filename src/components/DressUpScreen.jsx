@@ -21,8 +21,8 @@ export default function DressUpScreen({ baseImage, scaleRatio, onReset }) {
   const [clothCategory, setClothCategory] = useState('poncho'); 
   const [dimType, setDimType] = useState('width'); 
 
-  // ふくらみ補正係数 (UIからは消すが、内部的なデフォルト値として1.1を維持)
-  const fitAdjustment = 1.1;
+  // ふくらみ補正係数 (完全にオフにするため1.0に設定)
+  const fitAdjustment = 1.0;
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
