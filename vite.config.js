@@ -14,5 +14,5 @@ export default defineConfig({
       usePolling: true, // WSL環境などでファイルの変更を強制的に監視する設定
     }
   },
-  base: '/nuidress/',
+  base: 'https://nuidress-k1m6.vercel.app/',
 })
